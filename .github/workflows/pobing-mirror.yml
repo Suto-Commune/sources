@@ -29,7 +29,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: 克隆仓库
         run: |
-          origin=https://github.com/PB-pobing/pobing.git
+          origin=https://github.com/PB-pobing/pobing
           folder=pobing
           echo $origin to $folder
           sudo apt install git
