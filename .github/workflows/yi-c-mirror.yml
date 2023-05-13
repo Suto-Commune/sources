@@ -31,6 +31,7 @@ jobs:
         run: |
           sudo apt install git
           cd ${GITHUB_WORKSPACE}
+          sudo rm -rf yi-c
           mkdir yi-c
           cd yi-c
           git clone https://gitlink.org.cn/yi-c/yd.git .
