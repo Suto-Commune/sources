@@ -1,14 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: 一程源镜像
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 */4 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,17 +27,18 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: 克隆仓库
         run: |
           sudo apt install git
           cd ${GITHUB_WORKSPACE}
-          mkdir mirror
-          cd mirror
+          mkdir yi-c
+          cd yi-c
           git clone https://gitlink.org.cn/yi-c/yd.git .
           sudo rm -rf .git
           cd ..
-      - name: Git Commit/Push Changes
+      - name: 提交更新
         # You may pin to the exact commit or the version.
         # uses: actions-x/commit@803b20e5b72c0425eb7919c42c321e67c5bc5d2d
         uses: actions-x/commit@v6
-
+        with: 
+            commit_message: "更新一程、源"
