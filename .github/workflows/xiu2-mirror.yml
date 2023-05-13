@@ -29,20 +29,20 @@ jobs:
       # Runs a single command using the runners shell
       - name: 克隆仓库
         run: |
-          set origin=https://github.com/XIU2/Yuedu
-          set folder=xiu2
-          echo ${origin} to ${folder}
+          origin=https://github.com/XIU2/Yuedu
+          folder=xiu2
+          echo $origin to $folder
           sudo apt install git
           cd ${GITHUB_WORKSPACE}
-          sudo rm -rf ${folder}
-          mkdir ${folder}
-          cd ${folder}
-          git clone ${origin} .
+          sudo rm -rf $folder
+          mkdir $folder
+          cd $folder
+          git clone $origin .
 
           sudo rm -rf !(LICENSE|README.md|shuyuan)
 
           rename shuyuan source.json
-          echo # 书源来源于${origin}>origin.md
+          echo # 书源来源于$origin>origin.md
           cd ..
       - name: 提交更新
         # You may pin to the exact commit or the version.
