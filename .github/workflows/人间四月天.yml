@@ -32,7 +32,7 @@ jobs:
             rm -rf 人间的四月天
             mkdir 人间的四月天
             cd 人间的四月天
-            suto apt install unzip curl wget jq
+            sudo apt install unzip curl wget jq
             json=$(curl -s "https://cloud.humorously.cn/api/api.php?link=https://xiahanyun.lanzoum.com/b030q8wyj&pwd=1234")
             filename=$(echo "$json" | jq -r '.data[0].name')
             url=$(echo "$json" | jq -r '.data[0].url')
@@ -43,6 +43,7 @@ jobs:
             mv bookSource.json sources.json
             rm -rf sy.zip
             echo 来源：https://xiahanyun.lanzoum.com/b030q8wyj 密码：1234>origin.md
+            cd ..
       - name: 提交更新
         # You may pin to the exact commit or the version.
         # uses: actions-x/commit@803b20e5b72c0425eb7919c42c321e67c5bc5d2d
