@@ -16,7 +16,7 @@ jobs:
       # This step checks out a copy of your repository.
       - uses: actions/checkout@v2
       # This step references the directory that contains the action.
-      - uses: ./.github/workflows/pobing-mirror
-      - uses: ./.github/workflows/xiu2-mirror
-      - uses: ./.github/workflows/yi-c-mirror
-      - uses: ./.github/workflows/人间四月天
+      - uses: ./.github/workflows/pobing-mirror.yml
+      - uses: ./.github/workflows/xiu2-mirror.yml
+      - uses: ./.github/workflows/yi-c-mirror.yml
+      - uses: ./.github/workflows/人间四月天.yml
