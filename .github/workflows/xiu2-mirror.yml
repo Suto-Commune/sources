@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: 一程、源镜像
+name: XIU2源镜像
 
 # Controls when the workflow will run
 on:
@@ -31,15 +31,20 @@ jobs:
         run: |
           sudo apt install git
           cd ${GITHUB_WORKSPACE}
-          sudo rm -rf yi-c
-          mkdir yi-c
-          cd yi-c
-          git clone https://gitlink.org.cn/yi-c/yd.git .
+          sudo rm -rf xiu2
+          mkdir xiu2
+          cd xiu2
+          git clone https://github.com/XIU2/Yuedu .
           sudo rm -rf .git
+          sudo rm -rf dist
+          sudo rm -rf .github
+          sudo rm -rf CNAME
+          sudo rm -rf *.html
+          sudo rm -rf .nojekyll
           cd ..
       - name: 提交更新
         # You may pin to the exact commit or the version.
         # uses: actions-x/commit@803b20e5b72c0425eb7919c42c321e67c5bc5d2d
         uses: actions-x/commit@v6
         with: 
-          commit_message: "更新一程、源"
+          commit_message: "更新XIU2源"
