@@ -39,6 +39,7 @@ jobs:
           cd $folder
           git clone $origin .
 
+          sudo rm -rf .*
           shopt -s extglob
           sudo rm -rf !(LICENSE|README.md|shuyuan)
 
