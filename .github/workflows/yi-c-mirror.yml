@@ -39,7 +39,7 @@ jobs:
           cd $folder
           git clone $origin .
 
-          sudo rm -rf .github
+          sudo rm -rf .github .git
 
           mv sy.json source.json
           mv dy.json subscribe.json

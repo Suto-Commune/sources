@@ -39,6 +39,8 @@ jobs:
           cd $folder
           git clone $origin .
 
+          sudo rm -rf .git
+
           mv sy.json source.json
           mv 50.json 50-sources.json
           echo 书源来源于$origin>origin.md
