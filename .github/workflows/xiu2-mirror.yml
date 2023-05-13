@@ -41,6 +41,7 @@ jobs:
           sudo rm -rf CNAME
           sudo rm -rf *.html
           sudo rm -rf .nojekyll
+          rename shuyuan shuyuan.json
           cd ..
       - name: 提交更新
         # You may pin to the exact commit or the version.
