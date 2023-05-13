@@ -32,7 +32,7 @@ jobs:
           origin=https://github.com/XIU2/Yuedu
           folder=xiu2
           echo $origin to $folder
-          sudo apt install git rename
+          sudo apt install git
           cd ${GITHUB_WORKSPACE}
           sudo rm -rf $folder
           mkdir $folder
@@ -41,7 +41,7 @@ jobs:
 
           sudo rm -rf !(LICENSE|README.md|shuyuan)
 
-          rename shuyuan source.json
+          mv shuyuan source.json
           echo 书源来源于$origin>origin.md
           cd ..
       - name: 提交更新

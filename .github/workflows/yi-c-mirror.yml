@@ -32,7 +32,7 @@ jobs:
           origin=https://gitlink.org.cn/yi-c/yd.git
           folder=yi-c
           echo $origin to $folder
-          sudo apt install git rename
+          sudo apt install git
           cd ${GITHUB_WORKSPACE}
           sudo rm -rf $folder
           mkdir $folder
@@ -41,8 +41,8 @@ jobs:
 
           sudo rm -rf .github
 
-          rename sy.json source.json
-          rename dy.json subscribe.json
+          mv sy.json source.json
+          mv dy.json subscribe.json
           echo 书源来源于$origin>origin.md
           cd ..
       - name: 提交更新
