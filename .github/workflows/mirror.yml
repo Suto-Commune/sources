@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 触发镜像同步
+
+# Controls when the workflow will run
+on:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - uses: actions/checkout@v2
+      # This step references the directory that contains the action.
+      - uses: ./.github/workflows/pobing-mirror
+      - uses: ./.github/workflows/xiu2-mirror
+      - uses: ./.github/workflows/yi-c-mirror
+      - uses: ./.github/workflows/人间四月天
