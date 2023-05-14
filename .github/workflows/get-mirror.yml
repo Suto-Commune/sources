@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 */12 * * *'
+    - cron:  '0 0 * * MON'
   workflow_dispatch:
 
 
@@ -116,3 +116,45 @@ jobs:
         uses: actions-x/commit@v6
         with: 
           commit_message: "更新XIU2源"
+  namofree:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 克隆仓库
+        run: |
+          origin=https://www.yckceo.com/yuedu/shuyuans/json/id/5.json
+          folder=namofree
+          echo $origin to $folder
+          sudo apt install git wget
+          cd ${GITHUB_WORKSPACE}
+          sudo rm -rf $folder
+          mkdir $folder
+          cd $folder
+          wget $origin -O sources.json
+          echo 书源来源于$origin>origin.md
+          cd ..
+      - name: 提交更新
+        uses: actions-x/commit@v6
+        with: 
+          commit_message: "更新namofree源"
+  bsxq:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 克隆仓库
+        run: |
+          origin=https://www.yckceo.com/yuedu/shuyuans/json/id/8.json
+          folder=不世玄奇
+          echo $origin to $folder
+          sudo apt install git wget
+          cd ${GITHUB_WORKSPACE}
+          sudo rm -rf $folder
+          mkdir $folder
+          cd $folder
+          wget $origin -O sources.json
+          echo 书源来源于$origin>origin.md
+          cd ..
+      - name: 提交更新
+        uses: actions-x/commit@v6
+        with: 
+          commit_message: "更新不世玄奇源"
