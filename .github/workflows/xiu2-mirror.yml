@@ -43,7 +43,7 @@ jobs:
           shopt -s extglob
           sudo rm -rf !(LICENSE|README.md|shuyuan)
 
-          mv shuyuan source.json
+          mv shuyuan sources.json
           echo 书源来源于$origin>origin.md
           cd ..
       - name: 提交更新

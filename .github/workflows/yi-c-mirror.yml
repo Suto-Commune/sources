@@ -41,7 +41,7 @@ jobs:
 
           sudo rm -rf .github .git
 
-          mv sy.json source.json
+          mv sy.json sources.json
           mv dy.json subscribe.json
           echo 书源来源于$origin>origin.md
           cd ..
