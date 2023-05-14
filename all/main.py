@@ -16,7 +16,8 @@ t_reader.start()
 
 time.sleep(30)
 
-list1=[]
+list1 = []
+
 
 def traverse_folders(root):
     for dirpath, dirnames, filenames in os.walk(root):
@@ -39,17 +40,20 @@ traverse_folders(root_folder)
 
 print(list1)
 for i in list1:
-    with open(i,"r+",encoding="UTF-8") as f:
+    with open(i, "r+", encoding="UTF-8") as f:
         payload = f.read()
         headers = {
             'Content-Type': 'text/plain'
         }
-        payload=payload.encode('UTF-8')
+        payload = payload.encode('UTF-8')
         response = requests.post("http://127.0.0.1:8080/reader3/saveBookSources", headers=headers, data=payload)
 
-sources=requests.get("http://127.0.0.1:8080/reader3/getBookSources")
+sources = requests.get("http://127.0.0.1:8080/reader3/getBookSources")
 os.system("sudo rm -rf sources.json")
-with open("sources.json","w",encoding="UTF-8") as f:
-    f.write(str(json.dumps(sources.json()["data"], indent=4,ensure_ascii=False)))
+with open("sources.json", "w", encoding="UTF-8") as f:
+    f.write(str(json.dumps(sources.json()["data"], indent=4, ensure_ascii=False)))
 
+os.system("killall java")
+os.system("killall python")
+os.system("killall python3")
 sys.exit()
