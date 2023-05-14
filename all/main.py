@@ -53,7 +53,7 @@ os.system("sudo rm -rf sources.json")
 with open("sources.json", "w", encoding="UTF-8") as f:
     f.write(str(json.dumps(sources.json()["data"], indent=4, ensure_ascii=False)))
 
-os.system("sudo killall java")
-os.system("sudo killall python")
-os.system("sudo killall python3")
+os.system("sudo killall -9 -s 7 java")
+os.system("sudo killall -9 -s 7 python")
+os.system("sudo killall -9 -s 7 python3")
 sys.exit()
