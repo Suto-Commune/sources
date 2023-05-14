@@ -74,7 +74,7 @@ jobs:
             mkdir 人间的四月天
             cd 人间的四月天
             sudo apt install unzip curl wget jq
-            json=$(curl -s "https://cloud.humorously.cn/api/api.php?link=https://xiahanyun.lanzoum.com/b030q8wyj&pwd=1234")
+            json=$(curl -s "https://lanzouapi.000webhostapp.com/api.php?link=https://xiahanyun.lanzoum.com/b030q8wyj&pwd=1234")
             filename=$(echo "$json" | jq -r '.data[0].name')
             url=$(echo "$json" | jq -r '.data[0].url')
             echo "文件名: $filename"
