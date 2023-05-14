@@ -80,7 +80,7 @@ jobs:
             echo "文件名: $filename"
             echo "链接: $url"
             wget -O sy.zip $url
-            unzip sy.zip -f -d .
+            unzip sy.zip
             mv bookSource.json sources.json
             rm -rf sy.zip
             echo 来源：https://xiahanyun.lanzoum.com/b030q8wyj 密码：1234>origin.md
