@@ -37,7 +37,7 @@ jobs:
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
-          commit_message: "更新破冰源"
+          message: "更新破冰源"
   yi-c:
     runs-on: ubuntu-latest
     steps:
@@ -63,7 +63,7 @@ jobs:
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
-          commit_message: "更新一程、源"
+          message: "更新一程、源"
   april:
     runs-on: ubuntu-latest
     steps:
@@ -88,7 +88,7 @@ jobs:
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
-          commit_message: "更新四月天源"
+          message: "更新四月天源"
   xiu2:
     runs-on: ubuntu-latest
     steps:
@@ -115,7 +115,7 @@ jobs:
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
-          commit_message: "更新XIU2源"
+          message: "更新XIU2源"
   namofree:
     runs-on: ubuntu-latest
     steps:
@@ -136,7 +136,7 @@ jobs:
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
-          commit_message: "更新namofree源"
+          message: "更新namofree源"
   bsxq:
     runs-on: ubuntu-latest
     steps:
@@ -157,4 +157,4 @@ jobs:
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
-          commit_message: "更新不世玄奇源"
+          message: "更新不世玄奇源"
