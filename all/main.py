@@ -3,6 +3,7 @@ import os
 import json
 from threading import Thread
 import time
+import sys
 
 
 def jar():
@@ -50,3 +51,5 @@ sources=requests.get("http://127.0.0.1:8080/reader3/getBookSources")
 os.system("sudo rm -rf sources.json")
 with open("sources.json","w",encoding="UTF-8") as f:
     f.write(str(json.dumps(sources.json()["data"], indent=4,ensure_ascii=False)))
+
+sys.exit()
