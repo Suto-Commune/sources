@@ -85,6 +85,7 @@ jobs:
             rm -rf sy.zip
             echo 来源：https://xiahanyun.lanzoum.com/b030q8wyj 密码：1234>origin.md
             cd ..
+            git pull --rebase --autostash
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
