@@ -30,6 +30,8 @@ jobs:
       - name: 克隆仓库
         run: |
             cd ${GITHUB_WORKSPACE}
+            sudo apt install git
+            git pull --rebase origin
             cd all
             chmod +x+u *
             ./start.sh
