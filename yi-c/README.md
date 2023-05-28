@@ -4,12 +4,10 @@
 
 ##  📢 更新日志
 
-- 三不写书源（1.正版官方网站不写；2.APP小说网站不写；3.十八禁小说网站不写。）
- 
 ##  🗞️ 书源
 
 - 书源合集`110个`
-- 更新时间：05月01日（星期一）
+- 更新时间：05月16日（星期二）
 - 网络导入链接
 ```
 https://www.gitlink.org.cn/api/yi-c/yd/raw/sy.json?ref=master
@@ -21,7 +19,7 @@ https://code.gitlink.org.cn/api/v1/repos/yi-c/yd/raw/sy.json
 ##  🗂️ 订阅源
 
 - 订阅源合集
-- 更新时间：05月01日（星期一）
+- 更新时间：05月15日（星期一）
 - 网络导入链接
 ```
 https://www.gitlink.org.cn/api/yi-c/yd/raw/dy.json?ref=master
