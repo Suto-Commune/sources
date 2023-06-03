@@ -31,7 +31,6 @@ jobs:
           sudo rm -rf .git
 
           mv sy.json sources.json
-          mv 50.json 50-sources.json
           echo 书源来源于$origin>origin.md
           cd ..
 
