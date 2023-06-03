@@ -34,7 +34,7 @@ jobs:
           echo 书源来源于$origin>origin.md
           cd ..
 
-          git pull
+          git pull --no-edit --ff
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
@@ -61,7 +61,7 @@ jobs:
           mv dy.json subscribe.json
           echo 书源来源于$origin>origin.md
           cd ..
-          git pull
+          git pull --no-edit --ff
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
@@ -87,7 +87,7 @@ jobs:
             rm -rf sy.zip
             echo 来源：https://xiahanyun.lanzoum.com/b030q8wyj 密码：1234>origin.md
             cd ..
-            git pull
+            git pull --no-edit --ff
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
@@ -115,7 +115,7 @@ jobs:
           mv shuyuan sources.json
           echo 书源来源于$origin>origin.md
           cd ..
-          git pull
+          git pull --no-edit --ff
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
@@ -137,7 +137,7 @@ jobs:
           wget $origin -O sources.json
           echo 书源来源于$origin>origin.md
           cd ..
-          git pull
+          git pull --no-edit --ff
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
@@ -159,7 +159,7 @@ jobs:
           wget $origin -O sources.json
           echo 书源来源于$origin>origin.md
           cd ..
-          git pull
+          git pull --no-edit --ff
       - name: 提交更新
         uses: actions-x/commit@v6
         with: 
